@@ -6,7 +6,10 @@
     "@types/enzyme-adapter-react-16": "^1.0.2",
     "enzyme-adapter-react-16": "^1.1.1",
     "react": "^16.3.2",
+    "react-color": "^2.14.1",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.3.2",
+    "react-dragula": "^1.1.17",
     "react-scripts-ts": "2.15.1"
   },
   "scripts": {

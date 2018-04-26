@@ -2,23 +2,30 @@
 
 import * as React from 'react';
 
-export interface Props {
+interface IProps {
   name: string;
   enthusiasmLevel?: number;
 }
 
-function Hello({ name, enthusiasmLevel = 1 }: Props) {
-  if (enthusiasmLevel <= 0) {
+export const Hello: React.StatelessComponent<IProps> = (props: IProps) => {
+  //let enthusiasmLevel = props.enthusiasmLevel;
+
+  //if(enthusiasmLevel === undefined) enthusiasmLevel = 1;
+
+  if (props.enthusiasmLevel as number <= 0 ) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
 
   return (
     <div className="hello">
       <div className="greeting">
-        Hello {name + getExclamationMarks(enthusiasmLevel)}
+        Hello {props.name + getExclamationMarks(props.enthusiasmLevel as number)}
       </div>
     </div>
   );
+}
+Hello.defaultProps = {
+  enthusiasmLevel: 1
 }
 
 export default Hello;
